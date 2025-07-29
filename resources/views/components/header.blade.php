@@ -1,19 +1,20 @@
 <flux:header class="bg-navbar-light dark:bg-navbar w-full">
     <flux:sidebar.toggle class="lg:hidden" icon="bars-3" inset="left" />
 
-    <flux:brand href="/" logo="{{ asset('favicon.ico')}}" name="Técnica 2 Concordia" class="max-lg:hidden dark:hidden" />
-    <flux:brand href="/" logo="{{ asset('favicon.ico')}}" name="Técnica 2 Concordia" class="max-lg:hidden! hidden dark:flex" />
+    <img class="size-10" src="{{ asset('favicon.ico') }}" alt="{{ config('app.name') }}">
+
+    <flux:brand href="/" name="Técnica 2 Concordia" class="hidden lg:flex" />
 
     <flux:spacer class="-lg:hidden"></flux:spacer>
 
-    <flux:navbar class="-mb-px max-lg:hidden">
+    <flux:navbar class="-mb-px max-lg:hidden pr-10">
         <flux:navbar.item :current="request()->routeIs('home')" href="{{ route('home') }}">Inicio</flux:navbar.item>
         <flux:navbar.item :current="request()->routeIs('news')" href="{{ route('news') }}">Noticias</flux:navbar.item>
         <flux:navbar.item :current="request()->routeIs('formation')" href="{{ route('formation') }}">Formación profesional</flux:navbar.item>
         <flux:dropdown position="bottom">
             <flux:button variant="ghost" class="group">
                 <span class="flex items-center gap-2">
-                    <span class="font-medium">Tecnicaturas</span>
+                    <span class="text-zinc-500 dark:text-zinc-300">Tecnicaturas</span>
                     <flux:icon.chevron-down variant="mini" class="text-zinc-500 dark:text-white" />
                 </span>
             </flux:button>
@@ -26,6 +27,18 @@
         </flux:dropdown>
         <flux:navbar.item :current="request()->routeIs('contact')" href="{{ route('contact') }}">Contacto</flux:navbar.item>
     </flux:navbar>
+
+    <div class="flex gap-3 items-center">
+        <flux:link external href="https://www.instagram.com/escuelatecnican2/">
+            <img src="{{ asset('instagram.ico') }}" class="size-6">
+        </flux:link>
+        <flux:link external href="https://www.facebook.com/profile.php?id=100064268132995">
+            <img src="{{ asset('facebook.ico') }}" class="size-6">
+        </flux:link>
+        <flux:link external href="https://www.youtube.com/@tecnican2independencia382">
+            <img src="{{ asset('youtube.ico') }}" class="size-6">
+        </flux:link>
+    </div>
 
     <flux:separator vertical class="max-lg:hidden m-2"></flux:separator>
 

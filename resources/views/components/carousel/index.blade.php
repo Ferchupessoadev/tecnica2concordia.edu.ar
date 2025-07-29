@@ -18,5 +18,5 @@
 
         images[current].classList.remove('opacity-0');
         images[current].classList.add('opacity-100');
-    }, 4000);
+    }, 2000);
 </script>
