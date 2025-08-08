@@ -6,6 +6,7 @@
         <title>{{ $title }}</title>
         @fluxAppearance
         @vite('resources/css/app.css')
+        @include('partials.head')
     </head>
     <body class="bg-[var(--color-surface)] dark:bg-[var(--color-surface)] text-[var(--color-surface-content)] flex min-h-screen flex-col font-roboto">
         <x-header></x-header>
