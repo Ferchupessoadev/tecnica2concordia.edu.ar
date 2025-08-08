@@ -1,6 +1,4 @@
 <flux:header class="bg-navbar-light dark:bg-navbar w-full">
-    <flux:sidebar.toggle class="lg:hidden" icon="bars-3" inset="left" />
-
     <img class="size-10" src="{{ asset('favicon.ico') }}" alt="{{ config('app.name') }}">
 
     <flux:brand href="/" name="Técnica 2 Concordia" class="hidden lg:flex" />
@@ -40,24 +38,3 @@
         </flux:menu>
     </flux:dropdown>
 </flux:header>
-
-<flux:sidebar stashable sticky class="lg:hidden bg-zinc-50 dark:bg-zinc-900 border rtl:border-r-0 rtl:border-l border-zinc-200 dark:border-zinc-700">
-    <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
-
-    <flux:brand href="/" logo="{{ asset('favicon.ico') }}" name="Técnica 2 Concordia" class="px-2 dark:hidden" />
-    <flux:brand href="/" logo="{{ asset('favicon.ico') }}" name="Técnica 2 Concordia" class="px-2 hidden dark:flex" />
-
-    <flux:navlist variant="outline">
-        <flux:navlist.item :current="request()->routeIs('home')" href="{{ route('home') }}">Inicio</flux:navlist.item>
-        <flux:navlist.item :current="request()->routeIs('news')" href="{{ route('news') }}">Noticias</flux:navlist.item>
-        <flux:navlist.item :current="request()->routeIs('formation')" href="{{ route('formation') }}">Formación profesional</flux:navlist.item>
-        <flux:navlist.item :current="request()->routeIs('events')" href="{{ route('events') }}">Eventos</flux:navlist.item>
-        <flux:navlist.item :current="request()->routeIs('contact')" href="{{ route('contact') }}">Contacto</flux:navlist.item>
-    </flux:navlist>
-
-    <flux:spacer />
-
-    <flux:navlist variant="outline">
-        <flux:navlist.item href="{{ route('faq') }}">Faq</flux:navlist.item>
-    </flux:navlist>
-</flux:sidebar>
