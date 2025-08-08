@@ -8,24 +8,7 @@
     <flux:spacer class="-lg:hidden"></flux:spacer>
 
     <flux:navbar class="-mb-px max-lg:hidden pr-10">
-        <flux:navbar.item :current="request()->routeIs('home')" href="{{ route('home') }}">Inicio</flux:navbar.item>
-        <flux:navbar.item :current="request()->routeIs('news')" href="{{ route('news') }}">Noticias</flux:navbar.item>
-        <flux:navbar.item :current="request()->routeIs('formation')" href="{{ route('formation') }}">Formación profesional</flux:navbar.item>
-        <flux:dropdown position="bottom">
-            <flux:button variant="ghost" class="group">
-                <span class="flex items-center gap-2">
-                    <span class="text-zinc-500 dark:text-zinc-300">Tecnicaturas</span>
-                    <flux:icon.chevron-down variant="mini" class="text-zinc-500 dark:text-white" />
-                </span>
-            </flux:button>
-
-            <flux:menu>
-                <flux:menu.item :current="request()->routeIs('computation')" href="{{ route('computation') }}">Computación</flux:menu.item>
-                <flux:menu.item :current="request()->routeIs('bussiness')" href="{{ route('bussiness') }}">Adm. empresarial</flux:menu.item>
-                <flux:menu.item :current="request()->routeIs('gastronomy')" href="{{ route('gastronomy') }}">Gastronomía</flux:menu.item>
-            </flux:menu>
-        </flux:dropdown>
-        <flux:navbar.item :current="request()->routeIs('contact')" href="{{ route('contact') }}">Contacto</flux:navbar.item>
+        <h2>Expo técnica 2025</h2>
     </flux:navbar>
 
     <div class="flex gap-3 items-center">
