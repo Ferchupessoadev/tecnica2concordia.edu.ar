@@ -1,9 +1,8 @@
 <flux:header class="bg-navbar-light dark:bg-navbar w-full">
     <flux:sidebar.toggle class="lg:hidden" icon="bars-3" inset="left" />
 
-    <img class="size-10" src="{{ asset('favicon.ico') }}" alt="{{ config('app.name') }}">
 
-    <flux:brand href="/" name="Técnica 2 Concordia" class="hidden lg:flex" />
+    <flux:brand href="/" logo="{{ asset('favicon.ico') }}" name="E.E.T. N° 2 Independencia" class="px-2" />
 
     <flux:spacer class="-lg:hidden"></flux:spacer>
 
@@ -27,6 +26,8 @@
         </flux:dropdown>
         <flux:navbar.item :current="request()->routeIs('contact')" href="{{ route('contact') }}">Contacto</flux:navbar.item>
     </flux:navbar>
+
+    <flux:spacer class="-lg:hidden"></flux:spacer>
 
     <div class="flex gap-3 items-center">
         <flux:link external href="https://www.instagram.com/escuelatecnican2/">
@@ -70,11 +71,5 @@
         <flux:navlist.item :current="request()->routeIs('formation')" href="{{ route('formation') }}">Formación profesional</flux:navlist.item>
         <flux:navlist.item :current="request()->routeIs('events')" href="{{ route('events') }}">Eventos</flux:navlist.item>
         <flux:navlist.item :current="request()->routeIs('contact')" href="{{ route('contact') }}">Contacto</flux:navlist.item>
-    </flux:navlist>
-
-    <flux:spacer />
-
-    <flux:navlist variant="outline">
-        <flux:navlist.item href="{{ route('faq') }}">Faq</flux:navlist.item>
     </flux:navlist>
 </flux:sidebar>

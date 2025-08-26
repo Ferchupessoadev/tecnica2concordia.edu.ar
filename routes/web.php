@@ -19,5 +19,4 @@ Route::view('/computacion', 'computation')->name('computation');
 Route::view('/admempresarial', 'bussiness')->name('bussiness');
 Route::view('/gastronomia', 'gastronomy')->name('gastronomy');
 
-
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

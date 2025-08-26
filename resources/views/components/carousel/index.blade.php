@@ -2,7 +2,7 @@
 <div id="carousel" {{ $attributes->merge(['class' => 'relative overflow-hidden']) }}>
     {{ $slot }}
     @if ($dark)
-        <div class="absolute inset-0 bg-black/60 z-10"></div>
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
     @endif
 </div>
 
