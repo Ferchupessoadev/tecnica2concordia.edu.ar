@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import '../../vendor/livewire/flux/dist/flux.css';
+@import "tailwindcss";
+@import "../../vendor/livewire/flux/dist/flux.css";
 
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -9,12 +9,59 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @font-face {
-    font-family: 'Roboto';
-    src: '../fonts/Roboto.woff' format('woff');
+    font-family: "Roboto";
+    src: "../fonts/Roboto-Regular.woff2" format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: "../fonts/Roboto-Bold.woff2" format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: "../fonts/Roboto-Italic.woff2" format("woff2");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: "../fonts/Roboto-BoldItalic.woff2" format("woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: "../fonts/Oswald/Oswald-Regular.woff2" format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: "../fonts/Oswald/Oswald-Bold.woff2" format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: "../fonts/Oswald/Oswald-Medium.woff2" format("woff2");
+    font-weight: 500;
+    font-style: normal;
 }
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
 
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f5f5f5;
@@ -28,51 +75,72 @@
     --color-zinc-900: #171717;
     --color-zinc-950: #0a0a0a;
 
-    --color-accent: #ffffff;         /* En oscuro, acento pasa a blanco */
+    --color-accent: #ffffff; /* En oscuro, acento pasa a blanco */
     --color-accent-content: #a2132f; /* Texto se vuelve bordó sobre blanco */
     --color-accent-foreground: #4d0a17; /* Borde oscuro bordó profundo */
     --color-navbar: #111016;
     --color-navbar-light: #d4d4d8;
 
-    --color-surface: #FDFDFC;            /* Fondo principal */
-    --color-surface-content: #000000;    /* Texto general */
+    --color-surface: #fdfdfc; /* Fondo principal */
+    --color-surface-content: #000000; /* Texto general */
 
-    --font-roboto: 'Roboto';
-
+    --font-roboto: "Roboto";
+    --font-oswald: "Oswald";
 }
 
 @layer theme {
     .dark {
-        --color-accent: #ffffff;         /* En oscuro, acento pasa a blanco */
+        --color-accent: #ffffff; /* En oscuro, acento pasa a blanco */
         --color-accent-content: #a2132f; /* Texto se vuelve bordó sobre blanco */
         --color-accent-foreground: #4d0a17; /* Borde oscuro bordó profundo */
 
-        --color-surface: #0a0a0a;        /* Fondo general oscuro */
-        --color-surface-content: #ffffff;/* Texto claro */
-
+        --color-surface: #0a0a0a; /* Fondo general oscuro */
+        --color-surface-content: #ffffff; /* Texto claro */
 
         .background-primary {
             background:
-              radial-gradient(circle at 10% 20%, rgba(162, 19, 47, 0.4), transparent 50%),
-              radial-gradient(circle at 90% 95%, rgba(100, 10, 30, 0.3), transparent 50%),
-              linear-gradient(160deg, rgba(162, 19, 47, 0.05), rgba(0, 0, 0, 0.8));
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(162, 19, 47, 0.4),
+                    transparent 50%
+                ),
+                radial-gradient(
+                    circle at 90% 95%,
+                    rgba(100, 10, 30, 0.3),
+                    transparent 50%
+                ),
+                linear-gradient(
+                    160deg,
+                    rgba(162, 19, 47, 0.05),
+                    rgba(0, 0, 0, 0.8)
+                );
             background-blend-mode: lighten;
         }
     }
 
     .background-primary {
-        background-color: #FDFDFC;
+        background-color: #fdfdfc;
         background-image:
-          radial-gradient(circle at 30% 40%, rgba(162, 19, 47, 0.15), transparent 50%),
-          radial-gradient(circle at 80% 70%, rgba(100, 10, 30, 0.1), transparent 60%),
-          linear-gradient(160deg, rgba(162, 19, 47, 0.05), rgba(0, 0, 0, 0.03));
+            radial-gradient(
+                circle at 30% 40%,
+                rgba(162, 19, 47, 0.15),
+                transparent 50%
+            ),
+            radial-gradient(
+                circle at 80% 70%,
+                rgba(100, 10, 30, 0.1),
+                transparent 60%
+            ),
+            linear-gradient(
+                160deg,
+                rgba(162, 19, 47, 0.05),
+                rgba(0, 0, 0, 0.03)
+            );
         background-blend-mode: multiply;
     }
 }
 
-
 @layer base {
-
     *,
     ::after,
     ::before,
@@ -80,7 +148,6 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
-
 }
 
 [data-flux-field]:not(ui-radio, ui-checkbox) {
@@ -88,7 +155,7 @@
 }
 
 [data-flux-label] {
-    @apply  !mb-0 !leading-tight;
+    @apply !mb-0 !leading-tight;
 }
 
 input:focus[data-flux-control],
