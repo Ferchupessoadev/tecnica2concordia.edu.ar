@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Livewire\Contact;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
@@ -13,7 +14,7 @@ Route::view('/faq', 'faq')->name('faq');
 Route::view('/noticias', 'news')->name('news');
 Route::view('/formacion-profesional', 'formation')->name('formation');
 Route::view('/eventos', 'events')->name('events');
-Route::view('/contacto', 'contact')->name('contact');
+Route::get('/contacto', Contact::class)->name('contact');
 
 Route::view('/computacion', 'computation')->name('computation');
 Route::view('/admempresarial', 'bussiness')->name('bussiness');
