@@ -7,7 +7,7 @@
         @fluxAppearance
         @vite('resources/css/app.css')
     </head>
-    <body class="bg-[var(--color-surface)] dark:bg-[var(--color-surface)] text-[var(--color-surface-content)] flex min-h-screen flex-col font-roboto">
+    <body class="bg-[var(--color-surface)] dark:bg-[var(--color-surface)] text-[var(--color-surface-content)] flex min-h-screen flex-col font-oswald">
         <x-header></x-header>
         {{ $slot }}
         @fluxScripts
