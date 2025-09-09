@@ -1,8 +1,8 @@
-<flux:header class="bg-navbar-light dark:bg-navbar w-full">
+<flux:header class="bg-navbar w-full">
     <flux:sidebar.toggle class="lg:hidden" icon="bars-3" inset="left" />
 
 
-    <flux:brand href="/" logo="{{ asset('favicon.ico') }}" name="E.E.T. N° 2 Independencia" class="px-2" />
+    <flux:brand href="/" logo="{{ asset('favicon.ico') }}" name="E.E.T. N° 2 Independencia" class="text-white px-2" />
 
     <flux:spacer class="-lg:hidden"></flux:spacer>
 
@@ -13,8 +13,8 @@
         <flux:dropdown position="bottom">
             <flux:button variant="ghost" class="group">
                 <span class="flex items-center gap-2">
-                    <span class="text-zinc-500 dark:text-zinc-300">Tecnicaturas</span>
-                    <flux:icon.chevron-down variant="mini" class="text-zinc-500 dark:text-white" />
+                    <span class="text-gray-600">Tecnicaturas</span>
+                    <flux:icon.chevron-down variant="mini" class="text-white" />
                 </span>
             </flux:button>
 
