@@ -13,7 +13,7 @@
         <flux:dropdown position="bottom">
             <flux:button variant="ghost" class="group">
                 <span class="flex items-center gap-2">
-                    <span class="text-gray-600">Tecnicaturas</span>
+                    <span class="text-gray-200">Tecnicaturas</span>
                     <flux:icon.chevron-down variant="mini" class="text-white" />
                 </span>
             </flux:button>
@@ -29,7 +29,7 @@
 
     <flux:spacer class="-lg:hidden"></flux:spacer>
 
-    <div class="flex gap-3 items-center">
+    <div class="hidden md:flex gap-3 items-center">
         <flux:link external href="https://www.instagram.com/escuelatecnican2/">
             <img src="{{ asset('instagram.ico') }}" class="size-6">
         </flux:link>
@@ -59,7 +59,7 @@
     </flux:dropdown>
 </flux:header>
 
-<flux:sidebar stashable sticky class="lg:hidden bg-zinc-50 dark:bg-zinc-900 border rtl:border-r-0 rtl:border-l border-zinc-200 dark:border-zinc-700">
+<flux:sidebar stashable sticky class="lg:hidden bg-zinc-900 border rtl:border-r-0 rtl:border-l border-zinc-200 dark:border-zinc-700">
     <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
     <flux:brand href="/" logo="{{ asset('favicon.ico') }}" name="Técnica 2 Concordia" class="px-2 dark:hidden" />

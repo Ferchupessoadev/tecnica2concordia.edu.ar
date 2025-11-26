@@ -19,11 +19,12 @@ class Login extends Component
             'password' => 'required',
         ]);
 
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            $this->redirect(route('home'));
-        } else {
-            $this->emit('error', 'Las credenciales proporcionadas no son válidas.');
+        if (!Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+            $this->addError('login', 'Credenciales incorrectas');
+            return;
         }
+
+        $this->redirect(route('home'));
     }
 
     #[Layout('components.layouts.app-auth', ['title' => 'Login'])]
